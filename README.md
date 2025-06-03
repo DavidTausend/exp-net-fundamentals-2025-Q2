@@ -23,3 +23,14 @@ EXP-NET-FUNDAMENTALS-2025-Q2/
 │   ├── variables.tf           # Input variable definitions
 │   ├── outputs.tf             # Output values
 ├── README.md                  # Project documentation
+
+
+## Install AWS CLI
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+## Configure AWS Credentials
+
+Authenticated with your aws account:
+
+""aws config""
