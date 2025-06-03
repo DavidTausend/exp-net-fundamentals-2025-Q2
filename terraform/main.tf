@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.aws_region
-}
-
 resource "random_pet" "suffix" {
   length    = 2
   separator = "-"

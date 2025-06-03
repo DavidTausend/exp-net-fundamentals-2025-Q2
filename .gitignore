@@ -1,5 +1,5 @@
-.terraform/
-.terraform.lock.hcl
+*.terraform/
+*.terraform.lock.hcl
 *.tfstate
 *.tfstate.*
 *.tfvars
@@ -13,3 +13,6 @@
 *.tfstate.d/*
 *.tfstate.d/.terraform
 *.tfstate.d/.terraform.lock.hcl
+
+*.nwbootcampkey-ppk-raw.pem
+*.nwbootcampkey-pem.pem
