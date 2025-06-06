@@ -5,13 +5,21 @@ data "http" "my_ip" {
 
 resource "aws_security_group" "allow_login" {
   name        = "allow-login"
-  description = "Allow RDP + internal VPC access"
+  description = "Allow RDP + SSH + internal VPC access"
   vpc_id      = aws_vpc.main.id
 
   ingress {
     description = "Allow RDP from my IP"
     from_port   = 3389
     to_port     = 3389
+    protocol    = "tcp"
+    cidr_blocks = ["${chomp(data.http.my_ip.response_body)}/32"]
+  }
+
+  ingress {
+    description = "Allow SSH from my IP"
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["${chomp(data.http.my_ip.response_body)}/32"]
   }
