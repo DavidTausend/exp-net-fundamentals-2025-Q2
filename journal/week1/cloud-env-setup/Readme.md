@@ -43,6 +43,10 @@ chmod +x ./bin/rollback.sh
 
 You only have to chmod the file once to make it executable.
 
+## Summary
 
-```sh
-```
+•	✅ Installed AWS CLI and configured credentials
+•	✅ Set up remote Terraform backend with S3 and DynamoDB
+•	✅ Generated and deployed a VPC using both Terraform and CloudFormation
+•	✅ Visualized infrastructure using AWS Composer
+•	⚠️ Resolved minor dependency issues during provisioning
