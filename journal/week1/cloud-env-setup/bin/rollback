@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# === Configurable Parameters ===
+STACK_NAME="NetBootVpc"
+REGION="eu-central-1"
+
+# === Confirm Delete ===
+read -p "⚠️  Are you sure you want to delete the stack '$STACK_NAME' in region '$REGION'? (y/N): " confirm
+if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+  echo "❌ Rollback cancelled."
+  exit 1
+fi
+
+# === Delete the Stack ===
+echo "Rolling back CloudFormation stack: $STACK_NAME..."
+
+aws cloudformation delete-stack \
+  --stack-name "$STACK_NAME" \
+  --region "$REGION"
+
+# === Wait for deletion to complete ===
+echo "⏳ Waiting for stack deletion to complete..."
+
+aws cloudformation wait stack-delete-complete \
+  --stack-name "$STACK_NAME" \
+  --region "$REGION"
+
+# === Final Result ===
+if [ $? -eq 0 ]; then
+  echo "✅ Stack '$STACK_NAME' successfully deleted."
+else
+  echo "❌ Stack '$STACK_NAME' deletion failed or timed out."
+fi
