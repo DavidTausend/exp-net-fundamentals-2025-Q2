@@ -4,6 +4,12 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 ## Configure AWS Credentials
 
+Authenticated with your aws account:
+
+""aws configure""
+
+## Configure AWS Credentials
+
 Note: Your must create a user with access keys.
 
 ### Configure aws
@@ -55,6 +61,50 @@ terraform {
 terraform init
 
 
-To Convert .pem → .ppk
+### To Convert .pem → .ppk
 
 puttygen nwbootcampkey-ppk-raw.pem -o nwbootcampkey-ppk.ppk
+
+
+## VPC Settings
+
+There are the VPC Settings we observed Tim setup for our cloud environment in AWS:
+
+ -VPC IPv4 CIDR Block: 10.200.123.0/24
+ -Ipv6 CIRD Block: NO
+ -Number of Azs: 1
+ -Number of public subnets: 1
+ -Number of private subnets: 1
+ -NAT GATEWAY: None
+ -VPC Endpoints: None
+ -DNS Options: enable DNS Hostnames
+
+## Generated and Review CFN Template
+
+The CloudFormation template was generated using an LLM (ChatGPT) based on the instructor’s specifications.
+
+## Gegerated Deploy Script
+
+Using ChatGPT generated a bash script 'bin/deplpy'.
+
+Note: Make sure to run chmod +x bin/deploy to make it executable.
+
+## Visualization in Infrastructure Composer
+
+![Generated with AWS Infrastructure Composer:](../../../assets/readme/aws_insfr_composer.webp)
+
+## Deploy CFN
+
+ aws cloudformation create-stack \
+  --stack-name my-vpc-stack \
+  --template-body file://vpc-template.yaml \
+  --parameters \
+      ParameterKey=AvailabilityZone,ParameterValue=eu-central-1a
+
+
+## Issues
+
+### Content review
+
+I didn't review the complete videos or content, so 
+

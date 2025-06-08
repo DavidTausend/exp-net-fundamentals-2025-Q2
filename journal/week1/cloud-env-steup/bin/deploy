@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# === Configurable Parameters ===
+STACK_NAME="my-vpc-stack"
+TEMPLATE_FILE="vpc-template.yaml"
+REGION="eu-central-1"
+AVAILABILITY_ZONE="eu-central-1a"
+VPC_CIDR="10.200.123.0/24"
+PUBLIC_SUBNET_CIDR="10.200.123.0/28"
+PRIVATE_SUBNET_CIDR="10.200.123.16/28"
+
+# === Deploy the CloudFormation Stack ===
+echo "Deploying CloudFormation stack: $STACK_NAME..."
+
+aws cloudformation deploy \
+  --stack-name "$STACK_NAME" \
+  --template-file "$TEMPLATE_FILE" \
+  --region "$REGION" \
+  --capabilities CAPABILITY_NAMED_IAM \
+  --parameter-overrides \
+    VpcCidr="$VPC_CIDR" \
+    PublicSubnetCidr="$PUBLIC_SUBNET_CIDR" \
+    PrivateSubnetCidr="$PRIVATE_SUBNET_CIDR" \
+    AvailabilityZone="$AVAILABILITY_ZONE"
+
+# === Check Deployment Result ===
+if [ $? -eq 0 ]; then
+  echo "✅ Stack $STACK_NAME deployed successfully."
+  echo "Fetching outputs..."
+  aws cloudformation describe-stacks \
+    --stack-name "$STACK_NAME" \
+    --region "$REGION" \
+    --query "Stacks[0].Outputs" \
+    --output table
+else
+  echo "❌ Failed to deploy the stack. Check the AWS CloudFormation console for more info."
+fi
