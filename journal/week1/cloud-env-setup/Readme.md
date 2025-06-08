@@ -6,6 +6,7 @@
 aws sts get-caller-identity
 ```
 
+
 ### Terraform Deployment
 
 ```sh
@@ -13,6 +14,15 @@ tf init
 tf plan
 tf -auto-approve
 ```
+
+### Deploy with aws cli
+
+ aws cloudformation create-stack \
+  --stack-name my-vpc-stack \
+  --template-body file://template.yml \
+  --parameters \
+      ParameterKey=AvailabilityZone,ParameterValue=eu-central-1a
+
 ### Run Deploy Script
 
 ```sh
@@ -23,13 +33,15 @@ chmod u+x ./bin/deploy
 
 You only have to chmod the file once to make it executable.
 
-### Deploy with aws cli
+### Rollback deployment
 
- aws cloudformation create-stack \
-  --stack-name my-vpc-stack \
-  --template-body file://template.yml \
-  --parameters \
-      ParameterKey=AvailabilityZone,ParameterValue=eu-central-1a
+```sh
+cd journal/week1/cloud-env-setup
+chmod +x ./bin/rollback.sh
+./bin/rollback.sh
+```
+
+You only have to chmod the file once to make it executable.
 
 
 ```sh

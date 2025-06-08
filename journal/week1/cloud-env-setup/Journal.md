@@ -14,9 +14,9 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 Before proceeding, create an IAM user with programmatic access and appropriate permissions (e.g., `AmazonEC2FullAccess`, `AmazonS3FullAccess`, `AmazonDynamoDBFullAccess`).
 
-![](assets/create_cli_user.webp)
-![](assets/create_cli_user_permissions.webp)
-![](assets/create_cli_user_review.webp)
+![](assets/create_cli_user.png)
+![](assets/create_cli_user_permissions.png)
+![](assets/create_cli_user_review.png)
 
 Authenticate your AWS CLI session:
 ```bash
@@ -108,22 +108,26 @@ The CloudFormation template was generated using an LLM (ChatGPT) based on Andrew
 
 ## Gegerated Deploy Script
 
-Using ChatGPT generated a bash script 'bin/deplpy'.
+Using ChatGPT generated a bash script 'bin/deploy'.
 
 Note: Make sure to run chmod +x bin/deploy to make it executable.
 
 
 ## Visualization in Infrastructure Composer
 
-![Generated with AWS Infrastructure Composer:](../../../assets/readme/aws_insfr_composer.webp)
+![Generated with AWS Infrastructure Composer:](../../../assets/readme/aws_insfr_composer.png)
 
 
 ## Deployed Resource to AWS
 
 These visual outputs reflect the AWS resources deployed using the CloudFormation template:
 
-![](assets/aws_vpc_resource_map.webp)
-![](assets/cfn_resources.webp)
+![](assets/aws_vpc_resource_map.png)
+![](assets/cfn_resources.png)
+
+## Gegerated Rollback Script
+
+Using ChatGPT generated a bash script 'bin/rollback'.
 
 
 ## Issues Encountered
