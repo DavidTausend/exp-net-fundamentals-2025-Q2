@@ -17,29 +17,32 @@
 ```bash
 EXP-NET-FUNDAMENTALS-2025-Q2/
 ├── assets/
-│   └── readme/
-│       └── netz.webp
+│
 ├── journal/
-│   └── week1/
-│       └── cloud-env-setup/
-│           ├── bin/
-│           │   └── deploy                        # Bash script to deploy CFN stack
-│           ├── CFN/
-│           │   └── template.yml                  # CloudFormation template
-│           ├── terraform/
-│           │   ├── .terraform/                   # Terraform working directory
-│           │   ├── .terraform.lock.hcl
-│           │   ├── backend.tf                    # Remote backend config
-│           │   ├── keypair.tf                    # SSH key pair resource
-│           │   ├── main.tf                       # Main VPC and network config
-│           │   ├── network_interface.tf          # Network interface definitions
-│           │   ├── outputs.tf                    # Output variables
-│           │   ├── provider.tf                   # AWS provider config
-│           │   ├── ubuntu_instance.tf            # Ubuntu EC2 instance config
-│           │   ├── windows_instance.tf           # Windows EC2 instance config
-│           │   └── variables.tf                  # Input variable declarations
-│           └── Readme.md                         # Week 1 documentation
+│   ├── week1/
+│   │   └── cloud-env-setup/
+│   │       ├── bin/
+│   │       │   ├── deploy                        # Bash script to deploy resources
+│   │       │   └── rollback                      # Script to tear down resources
+│   │       ├── CFN/
+│   │       │   └── template.yml                  # CloudFormation template
+│   │       ├── ip-address-management/
+│   │       │   └── templates/vm/
+│   │       │       ├── parameters.json           # Parameters for Bicep deployment
+│   │       │       ├── template.bicep            # Azure Bicep template
+│   │       │       └── template.json             # Original ARM template
+│   │       ├── Journal.md                        # Cloud setup journal
+│   │       └── Readme.md                         # Cloud setup documentation
+│   ├── packet-tracer/
+│   │   └── Journal.md                            # Cisco Packet Tracer journal
+│   ├── windows-networking/
+│   │   └── Journal.md                            # Windows networking journal
+│   └── Journal.md                                # General-purpose journal (root of journal folder)
+│
+├── terraform/                                     # Terraform folder (expanded in previous structure)
+│
 ├── week2/
+│
 ├── .gitignore
-└── README.md                                     # Root project documentation
+└── README.md                                      # Root documentation
 ```
