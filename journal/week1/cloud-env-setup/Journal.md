@@ -19,6 +19,7 @@ Before proceeding, create an IAM user with programmatic access and appropriate p
 ![](assets/create_cli_user_review.png)
 
 Authenticate your AWS CLI session:
+
 ```bash
 aws configure
 ```
