@@ -33,13 +33,21 @@ EXP-NET-FUNDAMENTALS-2025-Q2/
 │   │       │       └── template.json             # Original ARM template
 │   │       ├── Journal.md                        # Cloud setup journal
 │   │       └── Readme.md                         # Cloud setup documentation
-│   ├── packet-tracer/
-│   │   └── Journal.md                            # Cisco Packet Tracer journal
+│   ├── linux-firewall-rules/
+│   │   └── Journal.md                            # Linux iptables & firewall lab notes
+│   ├── linux-networking/
+│   │   └── Journal.md                            # Linux networking journal
+│   ├── windows-firewall-rules/
+│   │   ├── index.html                            # Sample HTML file for firewall test
+│   │   ├── Journal.md                            # Windows firewall lab journal
+│   │   └── Readme.md                             # Windows firewall documentation
 │   ├── windows-networking/
-│   │   └── Journal.md                            # Windows networking journal
+│   │   ├── Journal.md                            # Windows networking journal (copy 1)
+│   │   ├── Journal.md                            # Windows networking journal (copy 2)
+│   │   └── Readme.md                             # Windows networking documentation
 │   └── Journal.md                                # General-purpose journal (root of journal folder)
 │
-├── terraform/                                     # Terraform folder (expanded in previous structure)
+├── terraform/                                     # Terraform folder (structure not shown)
 │
 ├── week2/
 │
