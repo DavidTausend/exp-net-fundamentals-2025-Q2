@@ -6,13 +6,15 @@
 
 ## Introduction
 
+This repo is my journey through the Network Fundamentals Bootcamp (Q2 2025) and hands-on experience across AWS, Azure, and real/local networking labs.  
+
 ## Table of Contents
 
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
 <br>
 
-## Directory Structure
+## 📁 Directory Structure
 
 ```bash
 EXP-NET-FUNDAMENTALS-2025-Q2/
@@ -54,3 +56,32 @@ EXP-NET-FUNDAMENTALS-2025-Q2/
 ├── .gitignore
 └── README.md                                      # Root documentation
 ```
+
+## 🔗 Quick Links to Journals & Docs
+
+### ☁️ Week 1 – Cloud Setup
+- 📓 [Week 1 Journal](journal/week1/cloud-env-setup/Journal.md)
+- 📘 [Week 1 Readme](journal/week1/cloud-env-setup/Readme.md)
+
+### 🧱 Azure & Bicep
+- 📄 [parameters.json](journal/week1/cloud-env-setup/ip-address-management/templates/vm/parameters.json)
+- 📄 [template.bicep](journal/week1/cloud-env-setup/ip-address-management/templates/vm/template.bicep)
+- 📄 [template.json](journal/week1/cloud-env-setup/ip-address-management/templates/vm/template.json)
+
+### 🧯 Linux Firewall Rules
+- 🔥 [Linux Firewall Journal](journal/linux-firewall-rules/Journal.md)
+
+### 🧪 Linux Networking
+- 🌐 [Linux Networking Journal](journal/linux-networking/Journal.md)
+
+### 🪟 Windows Firewall Rules
+- 📓 [Windows Firewall Journal](journal/windows-firewall-rules/Journal.md)
+- 📘 [Windows Firewall Readme](journal/windows-firewall-rules/Readme.md)
+- 🌍 [Test Page: index.html](journal/windows-firewall-rules/index.html)
+
+### 🪟 Windows Networking
+- 📓 [Windows Networking Journal](journal/windows-networking/Journal.md)
+- 📘 [Windows Networking Readme](journal/windows-networking/Readme.md)
+
+### 📡 Cisco Packet Tracer
+- 🧠 [Packet Tracer Journal](journal/packet-tracer/Journal.md)
