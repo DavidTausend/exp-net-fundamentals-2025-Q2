@@ -10,11 +10,25 @@ This repo is my journey through the Network Fundamentals Bootcamp (Q2 2025) and 
 
 ## Table of Contents
 
+- [exp-net-fundamentals-2025-Q2](#exp-net-fundamentals-2025-q2)
+  * [Introduction](#introduction)
+  * [Table of Contents](#table-of-contents)
+  * [📂 Directory Structure](#---directory-structure)
+  * [🔗 Quick Links to Journals & Docs](#---quick-links-to-journals---docs)
+    + [☁️ Week 1 – Cloud Setup](#---week-1---cloud-setup)
+    + [🧱 Azure & Bicep](#---azure---bicep)
+    + [🧯 Linux Firewall Rules](#---linux-firewall-rules)
+    + [🧪 Linux Networking](#---linux-networking)
+    + [🪟 Windows Firewall Rules](#---windows-firewall-rules)
+    + [🪟 Windows Networking](#---windows-networking)
+    + [📡 Cisco Packet Tracer](#---cisco-packet-tracer)
+    + [📚 Week 2 Labs](#---week-2-labs)
+
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
 <br>
 
-## 📁 Directory Structure
+## 📂 Directory Structure
 
 ```bash
 EXP-NET-FUNDAMENTALS-2025-Q2/
@@ -44,14 +58,17 @@ EXP-NET-FUNDAMENTALS-2025-Q2/
 │   │   ├── Journal.md                            # Windows firewall lab journal
 │   │   └── Readme.md                             # Windows firewall documentation
 │   ├── windows-networking/
-│   │   ├── Journal.md                            # Windows networking journal (copy 1)
-│   │   ├── Journal.md                            # Windows networking journal (copy 2)
+│   │   ├── Journal.md                            # Windows networking journal
 │   │   └── Readme.md                             # Windows networking documentation
+│   ├── packet-tracer/
+│   │   └── Journal.md                            # Cisco Packet Tracer journal
+│   ├── terraform/
+│   │   └── Journal.md                            # Terraform provisioning logs and notes
 │   └── Journal.md                                # General-purpose journal (root of journal folder)
 │
-├── terraform/                                     # Terraform folder (structure not shown)
-│
 ├── week2/
+│   ├── cml/
+│   │   └── Journal.md                            # Cisco Modeling Labs, Wireshark, VPN, NAT, Proxy, HAProxy
 │
 ├── .gitignore
 └── README.md                                      # Root documentation
@@ -85,3 +102,6 @@ EXP-NET-FUNDAMENTALS-2025-Q2/
 
 ### 📡 Cisco Packet Tracer
 - 🧠 [Packet Tracer Journal](journal/packet-tracer/Journal.md)
+
+### 📚 Week 2 Labs
+- 🧪 [CML, Wireshark, VPN, NAT, Proxies](journal/week2/cml/Journal.md)
